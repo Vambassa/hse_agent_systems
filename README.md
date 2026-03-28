@@ -112,7 +112,6 @@ python -m pytest tests/test_assistant.py -v
 ├── characters.py        # Промпты характеров и обработчиков
 ├── memory.py            # MemoryManager (buffer/summary + entity memory)
 ├── requirements.txt     # Зависимости
-├── .env.example         # Шаблон для API-ключа
 └── tests/
     └── test_assistant.py
 ```
