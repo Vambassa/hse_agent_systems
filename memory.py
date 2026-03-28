@@ -43,8 +43,8 @@ class MemoryManager:
                 self._summarize()
 
     def _summarize(self):
-        """Суммаризирует старые сообщения, оставляя последние 10."""
-        keep_last = 10
+        """Суммаризирует старые сообщения, оставляя последние max_messages."""
+        keep_last = max(1, self.max_messages)
         old_messages = self.messages[:-keep_last]
         if not old_messages:
             return

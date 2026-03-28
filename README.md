@@ -10,16 +10,16 @@ pip install -r requirements.txt
 
 ## Настройка API-ключа
 
-Создайте файл `.env` в корне проекта:
+Перед запуском установите переменную окружения `OPENAI_API_KEY`:
 
 ```bash
-cp .env.example .env
+export OPENAI_API_KEY="sk-ваш-ключ"
 ```
 
-Откройте `.env` и впишите свой ключ:
+Проверить, что ключ подхватился, можно так:
 
-```
-OPENAI_API_KEY=sk-ваш-ключ
+```bash
+python -c "import os; print('OK' if os.getenv('OPENAI_API_KEY') else 'MISSING')"
 ```
 
 ## Запуск

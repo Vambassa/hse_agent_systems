@@ -26,7 +26,6 @@ from handlers import create_all_handlers, route, route_stream
 from memory import MemoryManager
 from models import AssistantResponse
 
-
 class SmartAssistant:
     """Основной класс ассистента: связывает классификатор, роутинг, память и характер."""
 
@@ -233,12 +232,6 @@ def main():
     parser.add_argument("--no-fallback", action="store_true", help="Отключить fallback-модель")
     parser.add_argument("--entities", action="store_true", help="Включить entity memory")
     args = parser.parse_args()
-
-    try:
-        from dotenv import load_dotenv
-        load_dotenv()
-    except ImportError:
-        pass
 
     assistant = SmartAssistant(
         character=args.character,
